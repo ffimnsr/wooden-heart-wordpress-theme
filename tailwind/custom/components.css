@@ -1,0 +1,127 @@
+/**
+ * Custom component classes.
+ */
+
+.entry-title {
+	word-wrap: break-word;
+}
+
+.entry-header > *,
+.entry-content > *,
+.entry-footer > * {
+	@apply mx-8;
+}
+
+.entry-content > .alignwide {
+	@apply max-w-wide;
+}
+
+.entry-content {
+	& > .alignfull {
+		@apply max-w-none;
+	}
+}
+
+.entry-footer > div {
+	& > .categories > a {
+		@apply text-xs font-semibold inline-block py-1 px-2 rounded text-blue-600 bg-blue-200 hover:bg-blue-300 uppercase last:mr-0 mr-1;
+	}
+
+	& > .tags > a {
+		@apply text-xs font-semibold inline-block py-1 px-2 rounded text-pink-600 bg-pink-200 hover:bg-pink-300 uppercase last:mr-0 mr-1;
+	}
+}
+
+.alignnone {
+	@apply block p-0 float-none;
+}
+
+.aligncenter {
+	@apply block p-0 float-none;
+
+	margin: .5em auto 1em;
+}
+
+.alignleft {
+	@apply block p-0 float-left;
+
+	margin: .5em 1em 1em 0;
+}
+
+.alignright {
+	@apply block p-0 float-right;
+
+	margin: .5em 0 1em 1em;
+}
+
+.wp-caption {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.wp-caption img {
+    display: inline;
+}
+
+.wp-caption p.wp-caption-text {
+    margin: 5px 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 75%;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.comment-respond > h3 {
+	@apply text-2xl font-semibold;
+}
+
+.comment-form-comment > label,
+.comment-form-author > label,
+.comment-form-email > label,
+.comment-form-url > label {
+	@apply block mt-2;
+}
+
+.comment-form-comment > textarea,
+.comment-form-author > input,
+.comment-form-email > input,
+.comment-form-url > input {
+	@apply block w-full;
+}
+
+.comment-form-cookies-consent {
+	@apply mt-2;
+}
+
+.comment-form {
+	@apply mb-4;
+
+	& > .form-submit > input[type="submit"] {
+		@apply mt-4 bg-primary py-2 px-4 font-semibold text-white rounded-lg shadow-md focus:outline-none;
+	}
+}
+
+.primary-nav > li {
+	@apply inline-block px-4 py-2;
+
+	&.current-menu-item {
+		@apply shadow-inner bg-gray-300 font-semibold rounded-md;
+	}
+}
+
+.nav-links {
+	@apply flex flex-row justify-between;
+
+	& > * > a {
+		@apply bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded block;
+	}
+}
+
+.twitter-tweet {
+	@apply mx-auto;
+}
+
+.sidebar > section > div > h2 {
+	@apply text-lg font-semibold;
+}

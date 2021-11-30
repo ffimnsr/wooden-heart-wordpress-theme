@@ -1,0 +1,10 @@
+/node_modules
+/vendor
+package-lock.json
+composer.lock
+style.css
+style.css.map
+style-editor.css
+style-editor.css.map
+.DS_Store
+/woodenheart.zip

@@ -1,0 +1,34 @@
+{
+	"private": true,
+	"devDependencies": {
+		"@_tw/themejson": "^0.1.2",
+		"@_tw/typography": "^0.4.1-2",
+		"@tailwindcss/aspect-ratio": "^0.3.0",
+		"@tailwindcss/forms": "^0.3.4",
+		"@tailwindcss/line-clamp": "^0.2.2",
+		"@wordpress/eslint-plugin": "^9.1.2",
+		"@wordpress/stylelint-config": "^19.1.0",
+		"archiver": "^5.3.0",
+		"autoprefixer": "^10.4.0",
+		"cross-env": "^7.0.3",
+		"npm-run-all": "^4.1.5",
+		"postcss-import": "^14.0.2",
+		"prettier": "^2.4.1",
+		"tailwindcss": "^2.2.16"
+	},
+	"scripts": {
+		"development:frontend": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind-frontend.config.js -o ./theme/style.css",
+		"development:editor": "npx tailwindcss --postcss -i ./tailwind/tailwind.css -c ./tailwind/tailwind-editor.config.js -o ./theme/style-editor.css",
+		"development": "run-p development:*",
+		"dev": "npm run development",
+		"watch:frontend": "npm run development:frontend -- --watch",
+		"watch:editor": "npm run development:editor -- --watch",
+		"watch": "run-p watch:*",
+		"production:frontend": "cross-env NODE_ENV=production npm run development:frontend -- --minify",
+		"production:editor": "cross-env NODE_ENV=production npm run development:editor -- --minify",
+		"production": "run-p production:*",
+		"prod": "npm run production",
+		"zip": "node scripts/zip.js wooden-heart",
+		"bundle": "run-s production zip"
+	}
+}

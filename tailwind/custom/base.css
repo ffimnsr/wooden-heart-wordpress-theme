@@ -1,0 +1,7 @@
+/**
+ * Custom base styles.
+ */
+
+ul, ol {
+    @apply list-inside;
+}
