@@ -6,19 +6,11 @@ module.exports = {
 	mode: 'jit',
 	future: {},
 	purge: {
-		layers: [
-			'base',
-			'components',
-		],
 		content: [
 			// Ensure changes to theme.json rebuild your CSS.
 			'./theme/theme.json',
 			'./theme/**/*.php',
-		],
-		safelist: [
-			'editor-post-title__block',
-			'editor-post-title__input',
-			'mx-auto',
+			'./safelist.txt',
 		],
 	},
 	theme: {
@@ -29,6 +21,25 @@ module.exports = {
 	},
 	variants: {},
 	plugins: [
+		// Generate safelist.txt file for use in purgeCSS.
+		require('tailwind-safelist-generator')({
+			path: 'safelist.txt',
+			patterns: [
+				'editor-post-title__block',
+				'editor-post-title__input',
+				'mx-{margin}',
+				'px-{padding}',
+				'py-{padding}',
+				'text-{textColor}',
+				'text-{fontSize}',
+				'font-{fontWeight}',
+				'leading-{lineHeight}',
+				'bg-{backgroundColor}',
+				'hover:bg-{backgroundColor}',
+				'hover:text-{textColor}',
+			],
+		}),
+
 		// Extract colors and widths from theme.json.
 		require('@_tw/themejson')(require('../theme/theme.json')),
 

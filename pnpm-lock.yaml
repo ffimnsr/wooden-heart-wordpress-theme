@@ -14,6 +14,7 @@ specifiers:
   npm-run-all: ^4.1.5
   postcss-import: ^14.0.2
   prettier: ^2.4.1
+  tailwind-safelist-generator: ^0.1.3
   tailwindcss: ^2.2.16
 
 devDependencies:
@@ -30,6 +31,7 @@ devDependencies:
   npm-run-all: 4.1.5
   postcss-import: 14.0.2
   prettier: 2.5.0
+  tailwind-safelist-generator: 0.1.3_tailwindcss@2.2.19
   tailwindcss: 2.2.19_autoprefixer@10.4.0
 
 packages:
@@ -2319,6 +2321,14 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       has-flag: 4.0.0
+    dev: true
+
+  /tailwind-safelist-generator/0.1.3_tailwindcss@2.2.19:
+    resolution: {integrity: sha512-LKvkWZ7mhEOD2yGICJVTg1N7CgumPw797SxkQc4MzCuqO+s96JDMJx0OV/DWkG0YsjglAR4rNnyiyuiFb0NaoQ==}
+    peerDependencies:
+      tailwindcss: ^2.2.7
+    dependencies:
+      tailwindcss: 2.2.19_autoprefixer@10.4.0
     dev: true
 
   /tailwindcss/2.2.19_autoprefixer@10.4.0:
