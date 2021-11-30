@@ -9,10 +9,10 @@
 
 get_header();
 ?>
-	<section class="md:flex">
-		<main id="primary" class="md:flex-1 container md:max-w-3xl ml-auto mr-8 mt-10">
+	<section class="lg:flex">
+		<main id="primary" class="container lg:flex-1 lg:max-w-3xl lg:ml-auto lg:mr-8 mx-auto mt-10">
 			<section class="bg-white mb-6 rounded overflow-hidden shadow-lg py-8">
-				<header>
+				<header class="entry-header">
 					<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wooden-heart' ); ?></h1>
 				</header>
 

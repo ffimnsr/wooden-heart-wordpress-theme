@@ -14,8 +14,8 @@
 
 get_header();
 ?>
-	<section class="md:flex">
-		<main id="primary" class="container md:flex-1 md:max-w-3xl ml-auto mr-8 mt-10">
+	<section class="lg:flex">
+		<main id="primary" class="container lg:flex-1 lg:max-w-3xl lg:ml-auto lg:mr-8 mx-auto mt-10">
 			<?php
 			while ( have_posts() ) :
 				the_post();

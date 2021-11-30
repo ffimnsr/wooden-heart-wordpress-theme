@@ -9,23 +9,15 @@
 
 get_header();
 ?>
-	<section class="md:flex">
-		<main id="primary" class="container md:flex-1 md:max-w-3xl ml-auto mr-8 mt-10">
+	<section class="lg:flex">
+		<main id="primary" class="container lg:flex-1 lg:max-w-3xl lg:ml-auto lg:mr-8 mx-auto mt-10">
 			<?php
 			while ( have_posts() ) :
 				the_post();
 
 				get_template_part( 'template-parts/content', get_post_type() );
 
-				?>
-
-				<?php if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-				<div class="h-auto w-full mb-4">
-					<?php dynamic_sidebar( 'sidebar-3' );  ?>
-				</div>
-				<?php } ?>
-
-				<?php
+				get_template_part( 'template-parts/in-page-ads-sidebar' );
 
 				the_post_navigation(
 					array(
