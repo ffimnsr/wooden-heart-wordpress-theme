@@ -98,9 +98,36 @@
 	@apply mb-4;
 
 	& > .form-submit > input[type="submit"] {
-		@apply mt-4 bg-primary py-2 px-4 font-semibold text-white rounded-lg shadow-md focus:outline-none;
+		@apply mt-4 bg-blue-500 hover:bg-blue-700 cursor-pointer py-2 px-4 font-semibold text-white rounded-lg shadow-md focus:outline-none;
 	}
 }
+
+.comment-body {
+	& > .comment-meta {
+		& > .comment-author {
+			& > img.avatar {
+				@apply absolute rounded-full;
+			}
+
+			& > b.fn {
+				@apply inline-block pl-16;
+			}
+		}
+
+		& > .comment-metadata {
+			@apply pl-16;
+		}
+	}
+
+	& > .comment-content {
+		@apply mt-2 mb-4 px-4 py-2 bg-gray-200 rounded-lg;
+	}
+
+	& > .reply {
+		@apply mb-4;
+	}
+}
+
 
 .primary-nav > li {
 	@apply inline-block px-4 py-2;
@@ -122,6 +149,12 @@
 	@apply mx-auto;
 }
 
-.sidebar > section > div > h2 {
-	@apply text-lg font-semibold;
+.sidebar > section {
+	& > h2 {
+		@apply text-lg font-semibold;
+	}
+
+	& > div > h2 {
+		@apply text-lg font-semibold;
+	}
 }

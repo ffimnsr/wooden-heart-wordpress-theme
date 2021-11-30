@@ -20,12 +20,12 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class=" bg-white mt-5 mb-6 rounded overflow-hidden shadow-lg px-8 py-8">
+<div id="comments" class="bg-white mt-5 mb-6 rounded overflow-hidden shadow-lg px-8 py-8">
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="text-2xl font-semibold">
+		<h2 class="text-2xl font-semibold mb-4">
 			<?php
 			$woodenheart_comment_count = get_comments_number();
 			if ( '1' === $woodenheart_comment_count ) {
@@ -51,8 +51,9 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
-					'short_ping' => true,
+					'style'      	=> 'ol',
+					'short_ping' 	=> true,
+					'avatar_size' 	=> 48,
 				)
 			);
 			?>

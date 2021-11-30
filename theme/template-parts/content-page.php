@@ -30,7 +30,7 @@
 	</div>
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-footer mt-4">
 			<?php
 			edit_post_link(
 				sprintf(

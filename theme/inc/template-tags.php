@@ -81,27 +81,38 @@ if ( ! function_exists( 'woodenheart_entry_footer' ) ) :
 		}
 
 
-		echo '<div class="block">';
+		echo '<div class="float-right block space-x-2">';
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span>';
 			comments_popup_link(
 				'<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" viewBox="0 0 20 20" fill="currentColor">' .
 				'<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />' .
 				'<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />' .
-				'</svg>'
+				'</svg>',
+				'<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" viewBox="0 0 20 20" fill="currentColor">' .
+				'<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />' .
+				'<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />' .
+				'</svg>',
+				'<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" viewBox="0 0 20 20" fill="currentColor">' .
+				'<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />' .
+				'<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />' .
+				'</svg>',
+				css_class: 'post-comment-link bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded inline-block'
 			);
 			echo '</span>';
 		}
 
 		edit_post_link(
-			'<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">' .
+			'<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" viewBox="0 0 20 20" fill="currentColor">' .
 			'<path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />' .
 			'<path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />' .
 		  	'</svg>',
 			'<span>',
-			'</span>'
+			'</span>',
+			class: 'post-edit-link bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded inline-block'
 		);
 		echo '</div>';
+		echo '<div class="clear-both"></div>';
 	}
 endif;
 

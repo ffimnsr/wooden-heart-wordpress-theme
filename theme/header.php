@@ -20,11 +20,11 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
+<body <?php body_class( 'bg-gray-100 text-gray-900 antialiased' ); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="min-h-screen md:flex">
+<div id="page" class="min-h-screen md:flex gap-4">
 	<?php get_sidebar(); ?>
-	<div id="content-root" class="bg-gray-100 p-10 flex-1">
+	<div id="content-root" class="p-10 md:flex-1">
 		<header id="masthead" class="w-full z-10">
 			<div>
 				<div class="text-center">

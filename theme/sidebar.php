@@ -21,7 +21,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     </button>
 </div>
 
-<aside id="secondary" class="sidebar w-64 py-8 px-4 space-y-4">
+<aside id="secondary" class="sidebar bg-white w-64 py-8 px-4 space-y-4 shadow-md">
 	<?php the_custom_logo(); ?>
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
