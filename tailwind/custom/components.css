@@ -142,7 +142,7 @@
 }
 
 .nav-links {
-	@apply flex flex-row justify-between;
+	@apply mx-2 md:mx-0 flex flex-row justify-between;
 
 	& > * > a {
 		@apply bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded block;
@@ -151,6 +151,16 @@
 
 .twitter-tweet {
 	@apply mx-auto;
+}
+
+.wp-block-embed-slideshare > div {
+	& > iframe {
+		@apply mx-auto block;
+	}
+
+	& > div {
+		@apply text-center block;
+	}
 }
 
 .sidebar > section {

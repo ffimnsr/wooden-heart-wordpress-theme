@@ -9,7 +9,7 @@
 
 ?>
 
-<section class="bg-white mb-6 rounded overflow-hidden shadow-lg py-8">
+<section class="bg-white mb-6 md:rounded overflow-hidden shadow-lg py-8">
 	<header class="entry-header">
 		<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'wooden-heart' ); ?></h1>
 	</header>

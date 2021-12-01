@@ -22,9 +22,9 @@
 
 <body <?php body_class( 'bg-gray-100 text-gray-900 antialiased' ); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="relative min-h-screen md:flex md:gap-4" x-data="{ isSidebarOpen: true }">
+<div id="page" class="relative min-h-screen md:flex md:gap-4" x-data="{ isSidebarOpen: false }">
 	<?php get_sidebar(); ?>
-	<div id="content-root" class="p-10 md:flex-1">
+	<div id="content-root" class="md:p-10 md:flex-1 py-10">
 		<header id="masthead" class="w-full z-10">
 			<div>
 				<div class="text-center">

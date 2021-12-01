@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white mb-6 rounded overflow-hidden shadow-lg py-8' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white mb-6 md:rounded overflow-hidden shadow-lg py-8' ); ?>>
 	<header class="entry-header mb-4">
 		<?php
 		the_title( sprintf( '<h2 class="entry-title mb-0"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
