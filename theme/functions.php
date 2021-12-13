@@ -9,7 +9,7 @@
 
 if ( ! defined( 'WOODENHEART_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'WOODENHEART_VERSION', '1.0.9' );
+	define( 'WOODENHEART_VERSION', '1.1.0' );
 }
 
 if ( ! function_exists( 'woodenheart_setup' ) ) :
@@ -203,3 +203,8 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Custom functionalities.
  */
+function wpb_disable_comment_url($fields) {
+	unset($fields['url']);
+	return $fields;
+}
+add_filter('comment_form_default_fields','wpb_disable_comment_url');

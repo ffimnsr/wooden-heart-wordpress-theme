@@ -1,4 +1,3 @@
-WoodenHeart
-===
+# Wooden Heart
 
-Description
+To build just run `pnpm bundle`.
