@@ -9,7 +9,7 @@
 
 if ( ! defined( 'WOODENHEART_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'WOODENHEART_VERSION', '1.1.0' );
+	define( 'WOODENHEART_VERSION', '1.1.2' );
 }
 
 if ( ! function_exists( 'woodenheart_setup' ) ) :
@@ -204,7 +204,23 @@ require get_template_directory() . '/inc/customizer.php';
  * Custom functionalities.
  */
 function wpb_disable_comment_url($fields) {
-	unset($fields['url']);
+	unset( $fields['url']);
 	return $fields;
 }
-add_filter('comment_form_default_fields','wpb_disable_comment_url');
+
+add_filter( 'comment_form_default_fields', 'wpb_disable_comment_url' );
+
+function only_authorised_rest_access( $result ) {
+    if( ! is_user_logged_in() ) {
+        return new WP_Error(
+			'rest_unauthorised',
+			__( 'Only authenticated users can access the REST API.', 'rest_unauthorised' ),
+			array( 'status' => rest_authorization_required_code() )
+		);
+    }
+
+    return $result;
+}
+
+add_filter( 'rest_authentication_errors', 'only_authorised_rest_access' );
+
