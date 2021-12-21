@@ -1,3 +1,7 @@
 # Wooden Heart
 
-To build just run `pnpm bundle`.
+To build for production just run `pnpm bundle`.
+
+## Development
+
+Modify both `functions.php` and `file-header.css` to bump the version. After that run `pnpm watch`.

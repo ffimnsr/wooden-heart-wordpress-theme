@@ -172,3 +172,19 @@
 		@apply text-lg font-semibold;
 	}
 }
+
+.search-form {
+	@apply mt-20 mx-auto w-96;
+
+	& > label:nth-child(1) {
+		@apply block;
+
+		& > .search-field {
+			@apply w-full text-center;
+		}
+	}
+
+	& > .search-submit {
+		@apply mt-2 mx-auto w-full bg-blue-500 hover:bg-blue-700 cursor-pointer py-1 px-2 font-semibold text-white rounded shadow-md focus:outline-none;
+	}
+}

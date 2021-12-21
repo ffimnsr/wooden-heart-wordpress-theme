@@ -15,10 +15,12 @@ get_header();
 			<?php if ( have_posts() ) : ?>
 
 				<header>
-					<?php
-					the_archive_title( '<h1 class="entry-title">', '</h1>' );
-					the_archive_description( '<div>', '</div>' );
-					?>
+					<div class="mb-4">
+						<?php
+						the_archive_title( '<h1 class="entry-title mb-0">', '</h1>' );
+						the_archive_description( '<div>', '</div>' );
+						?>
+					</div>
 				</header>
 
 				<?php

@@ -9,7 +9,7 @@
 
 if ( ! defined( 'WOODENHEART_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'WOODENHEART_VERSION', '1.1.2' );
+	define( 'WOODENHEART_VERSION', '1.1.3' );
 }
 
 if ( ! function_exists( 'woodenheart_setup' ) ) :
